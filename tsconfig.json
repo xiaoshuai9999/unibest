@@ -12,6 +12,7 @@
     },
     "lib": ["esnext", "dom"],
     "types": [
+      "node",
       "@dcloudio/types",
       "@types/wechat-miniprogram",
       "@uni-helper/uni-app-types",
