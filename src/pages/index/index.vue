@@ -1,42 +1,19 @@
 <!-- 使用 type="home" 属性设置首页，其他页面不需要设置，默认为page；推荐使用json5，更强大，且允许注释 -->
-<route lang="json5" type="home">
-{
-  style: { navigationBarTitleText: '首页' },
-}
-</route>
+<route lang="json5" type="home"></route>
 <template>
-  <view class="bg-white h-full overflow-hidden">
-    <view class="flex justify-center items-center w-full h-30 bg-#2D71FB">
-      <view class="view-1 flex-auto h-full"></view>
-      <view class="view-2 flex-auto h-full"></view>
-      <view class="view-3 flex-auto h-full"></view>
+  <view class="h-screen w-full bg-contain bg-no-repeat overflow-hidden" style="background-image: url('../../static/img/login/decoration_bg.png')">
+    <view flex-center flex-col mt-20vh>
+      <image w-50vw h-14 src="/static/img/login/login_logo.png" alt=""></image>
+      <image w-12vh h-7 mt src="/static/img/login/supplier_platform.png" alt=""></image>
     </view>
-    <view class="mt-8">
-      <image src="/static/logo.svg" alt="" class="w-40 h-40 block mx-auto" />
-    </view>
-    <view class="text-center text-4xl main-title-color mt-4">unibest</view>
-    <view class="text-center text-2xl mt-4 mb-8">最好用的 uniapp 开发模板</view>
-    <view class="text-center text-xl">
-      unibest 是由 uniapp + Vue3 + Ts + Vite4 + UnoCss + UniUI 驱动的跨端快速启动模板，使用 VS Code
-      开发，具有代码提示、自动格式化、统一配置、代码片段等功能，同时内置了大量平时开发常用的基本组件，开箱即用，让你编写
-      uniapp 拥有 best 体验。
-    </view>
+    <Login />
+    <LanguageSwitch />
   </view>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import LanguageSwitch from '@/pages/index/components/LanguageSwitch.vue'
+import Login from './components/Login.vue'
+</script>
 
-<style lang="scss" scoped>
-.view-1 {
-  background: linear-gradient(to bottom, #dce5ff, #fff);
-}
-.view-2 {
-  background: linear-gradient(to bottom, #cbd5ff, #fff);
-}
-.view-3 {
-  background: linear-gradient(to bottom, #bbc5ff, #fff);
-}
-.main-title-color {
-  color: #d14328;
-}
-</style>
+<style lang="scss" scoped></style>

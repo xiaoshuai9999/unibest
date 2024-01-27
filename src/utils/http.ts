@@ -25,7 +25,7 @@ const httpInterceptor = {
     // 3. 添加小程序端请求头标识
     options.header = {
       platform: 'mp-weixin', // 可选值与 uniapp 定义的平台一致，告诉后台来源
-      ...options.header,
+      ...options.header
     }
     // 4. 添加 token 请求头标识
     const userStore = useUserStore()
@@ -33,7 +33,7 @@ const httpInterceptor = {
     if (token) {
       options.header.Authorization = `Bearer ${token}`
     }
-  },
+  }
 }
 
 // 拦截 request 请求
@@ -61,7 +61,7 @@ export const http = <T>(options: UniApp.RequestOptions) => {
           // 其他错误 -> 根据后端错误信息轻提示
           uni.showToast({
             icon: 'none',
-            title: (res.data as Data<T>).msg || '请求错误',
+            title: (res.data as Data<T>).msg || '请求错误'
           })
           reject(res)
         }
@@ -70,10 +70,10 @@ export const http = <T>(options: UniApp.RequestOptions) => {
       fail(err) {
         uni.showToast({
           icon: 'none',
-          title: '网络错误，换个网络试试',
+          title: '网络错误，换个网络试试'
         })
         reject(err)
-      },
+      }
     })
   })
 }

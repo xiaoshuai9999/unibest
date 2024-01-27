@@ -25,12 +25,10 @@
 </template>
 
 <script lang="ts" setup>
-import { getIsTabbar } from '@/utils/index'
-
 defineProps<{ title?: string }>()
 // 获取页面栈
 const pages = getCurrentPages()
-const isTabbar = getIsTabbar()
+const isTabbar = false
 console.log({ isTabbar, pagesLen: pages.length })
 
 // 获取屏幕边界到安全区域距离

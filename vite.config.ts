@@ -45,7 +45,7 @@ export default ({ command, mode }) => {
       UniPages({
         exclude: ['**/components/**/**.*'],
         homePage: 'pages/index/index',
-        subPackages: ['src/pages-sub'],
+        subPackages: ['src/pages-sub']
       }),
       UniLayouts(),
       UniPlatform(),
@@ -59,25 +59,25 @@ export default ({ command, mode }) => {
         // 指定要缓存的文件夹
         iconDirs: [path.resolve(process.cwd(), 'src/assets/svg')],
         // 指定symbolId格式
-        symbolId: 'icon-[dir]-[name]',
+        symbolId: 'icon-[dir]-[name]'
       }),
       vueSetupExtend(),
       AutoImport({
         imports: ['vue'],
-        dts: 'src/auto-import.d.ts',
+        dts: 'src/auto-import.d.ts'
       }),
 
       viteCompression(),
       ViteRestart({
         // 通过这个插件，在修改vite.config.js文件则不需要重新运行也生效配置
-        restart: ['vite.config.js'],
+        restart: ['vite.config.js']
       }),
       // h5环境增加编译时间
       process.env.UNI_PLATFORM === 'h5' && {
         name: 'html-transform',
         transformIndexHtml(html) {
           return html.replace('%BUILD_DATE%', dayjs().format('YYYY-MM-DD HH:mm:ss'))
-        },
+        }
       },
       // 打包分析插件
       mode === 'production' &&
@@ -85,29 +85,29 @@ export default ({ command, mode }) => {
           filename: './node_modules/.cache/visualizer/stats.html',
           open: true,
           gzipSize: true,
-          brotliSize: true,
-        }),
+          brotliSize: true
+        })
     ],
     css: {
       postcss: {
         plugins: [
           autoprefixer({
             // 指定目标浏览器
-            overrideBrowserslist: ['> 1%', 'last 2 versions'],
-          }),
-        ],
-      },
+            overrideBrowserslist: ['> 1%', 'last 2 versions']
+          })
+        ]
+      }
     },
 
     resolve: {
       alias: {
-        '@': path.join(process.cwd(), './src'),
-      },
+        '@': path.join(process.cwd(), './src')
+      }
     },
     server: {
       host: '0.0.0.0',
       hmr: true,
-      port: Number.parseInt(env.VITE_APP_PORT, 10),
+      port: Number.parseInt(env.VITE_APP_PORT, 10)
       // 自定义代理规则
       // proxy: {
       //   // 选项写法
@@ -123,9 +123,9 @@ export default ({ command, mode }) => {
       terserOptions: {
         compress: {
           drop_console: env.VITE_DELETE_CONSOLE === 'true',
-          drop_debugger: env.VITE_DELETE_CONSOLE === 'true',
-        },
-      },
-    },
+          drop_debugger: env.VITE_DELETE_CONSOLE === 'true'
+        }
+      }
+    }
   })
 }

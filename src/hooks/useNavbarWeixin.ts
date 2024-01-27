@@ -1,10 +1,9 @@
 import { onReady } from '@dcloudio/uni-app'
-import { getIsTabbar } from '@/utils/index'
 
 export default () => {
   // 获取页面栈
   const pages = getCurrentPages()
-  const isTabbar = getIsTabbar()
+  const isTabbar = false
 
   // 页面滚动到底部时的操作，通常用于加载更多数据
   const onScrollToLower = () => {}
@@ -28,8 +27,8 @@ export default () => {
         scrollSource: '#scroller',
         timeRange: 1000,
         startScrollOffset: 0,
-        endScrollOffset: 50,
-      },
+        endScrollOffset: 50
+      }
     )
     // 动画效果,导航栏标题
     pageInstance.animate(
@@ -40,15 +39,15 @@ export default () => {
         scrollSource: '#scroller',
         timeRange: 1000,
         startScrollOffset: 0,
-        endScrollOffset: 50,
-      },
+        endScrollOffset: 50
+      }
     )
     // 动画效果,导航栏返回按钮
     pageInstance.animate('.fly-navbar .left-icon', [{ color: '#fff' }, { color: '#000' }], 1000, {
       scrollSource: '#scroller',
       timeRange: 1000,
       startScrollOffset: 0,
-      endScrollOffset: 50,
+      endScrollOffset: 50
     })
   })
   // #endif
@@ -57,6 +56,6 @@ export default () => {
     pages,
     isTabbar,
     onScrollToLower,
-    safeAreaInsets,
+    safeAreaInsets
   }
 }
