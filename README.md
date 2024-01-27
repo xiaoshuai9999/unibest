@@ -18,19 +18,15 @@ v18.19.0：[https://nodejs.org/dist/latest-v18.x/node-v18.19.0-x64.msi](https://
 ## 其它
 ### 🏁Node环境
 部分同事会开发多个项目，使用NodeJs版本不同。解决的方法比较多，可自行探索。<br>
-这边推荐的是使用nvmd-desktop，已集成到项目中。 [下载](https://share.feijipan.com/s/3EUniujS) &nbsp;|&nbsp; [GitHub](https://github.com/1111mp/nvm-desktop)
-<br><font color=red>安装前需要彻底卸载本地的Node,重启电脑后安装。</font>
-<br>安装后下载需要的Node版本即可。安装后会自带<font color=green>nvmd</font>命令，可在软件界面上操作或使用命令操作切换Node版本。
-<br>命令用法：🚨🚨在软件界面中下载多个Node(如 v14.21.3 和 v18.19.0)<br>
-在命令行(终端)中进入到[package.json](./package.json)同级目录
-<p>
-为系统(全局)设置指定的版本：<font color=green>nvmd use v14.21.3</font><br>
-为项目设置指定的版本：<font color=green>nvmd use v18.19.0</font> 【本项目无需使用，已指定。仅需安装v18.19.0版本Node即可】
-</p>
+这边推荐的是使用[volta](https://docs.volta.sh/guide/getting-started)，此项目版本号已被固定。
+[下载](https://github.com/volta-cli/volta/releases/download/v1.1.1/volta-1.1.1-windows-x86_64.msi) &nbsp;|&nbsp;
+[GitHub](https://github.com/volta-cli/volta) |
+[掘金](https://juejin.cn/post/7251014326739042341)
+<br><font color=red>🚨🚨安装前需要彻底卸载本地的Node,重启电脑后安装。</font>
 <p style="height: 1px;background-color: #cccccc;"></p>
-<span style="color: #DCBA36">Linux和Mac用户也可使用</span>
-<a href="https://docs.volta.sh/guide/getting-started">volta</a>，此项目版本号也被固定(pin)好了。
-<p>所以只需要在终端中输入 <span style="color:green;">volta install node@18.19.0</span> ，安装Node即可。</p>
+volta安装成功后：
+<p>在终端(命令行)中输入 <span style="color:green;">volta install node@18.19.0</span> ，即安装Node 18.19.0版本。</p>
+<p>在终端(命令行)中输入 <span style="color:green;">volta install node@14.21.3</span> ，可安装Node 14.21.3版本。</p>
 <p style="height: 1px;background-color: #cccccc"></p>
 
 ### 🔧开发工具
@@ -68,31 +64,8 @@ v18.19.0：[https://nodejs.org/dist/latest-v18.x/node-v18.19.0-x64.msi](https://
 <p>DotEnv</p>
 </div>
 
-- 本项目使用 uniapp + Vue3 + Ts + Vite4 + UnoCss + UniUI 驱动
+#### 📌本项目由 uniapp + Vue3 + Ts + Vite4 + UnoCss + UniUI 驱动
 
-
-#### ✨ 特性
-
-- ⚡️ [Vue 3](https://github.com/vuejs/core), [Vite](https://github.com/vitejs/vite), [esbuild](https://github.com/evanw/esbuild)
-
-- 📦 [组件自动化加载](./src/components)
-
-- 📑 pinia+适用于多端的持久化方案
-
-- 🎨 [UnoCSS](https://unocss.dev/) - 高性能且极具灵活性的即时原子化 CSS 引擎
-
-- 😃 [UnoCSS Icons](https://unocss.dev/presets/icons), [海量图标-https://icones.js.org/](https://icones.js.org/)
-
-- 🔥 使用 [新的 `<script setup>` 语法](https://github.com/vuejs/rfcs/pull/227)
-
-- 📥 [API 自动加载](https://github.com/antfu/unplugin-auto-import) - 直接使用 Composition API 无需引入
-
-- 🦾 [TypeScript](https://www.typescriptlang.org/) & [ESLint](https://eslint.org/) & [stylelint](https://stylelint.io/) - 保证代码质量
-
-- 🗂 ES6 import 顺序自动排序，css 属性自动排序，增强编码一致性
-
-- 🌍 使用请求拦截器，封装请求
-
-#### 🎨 `v3` 代码段【使用vscode的宝宝使用】
+#### 🎨 `v3` 代码段【使用vscode的宝宝😃使用】
 
 在 `vue` 文件里面输入 `v3` 触发这个代码段。如下图，用户可以在`.vscode/vue3.code-snippets` 里面自行修改。
