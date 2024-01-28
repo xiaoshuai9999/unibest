@@ -1,7 +1,7 @@
 {
   "name": "supplier-platform",
   "version": "0.1.0",
-  "description": "云仓供应商平台",
+  "description": "WMS供应商平台",
   "type": "commonjs",
   "author": {
     "name": "LiShuai",
@@ -55,7 +55,6 @@
     "postcss": "^8.4.32",
     "postcss-html": "^1.5.0",
     "postcss-scss": "^4.0.9",
-    "rollup-plugin-visualizer": "^5.11.0",
     "sass": "^1.69.5",
     "stylelint": "^16.0.2",
     "stylelint-config-html": "^1.1.0",

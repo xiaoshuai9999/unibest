@@ -7,13 +7,13 @@ store.use(
   createPersistedState({
     storage: {
       getItem: uni.getStorageSync,
-      setItem: uni.setStorageSync,
-    },
-  }),
+      setItem: uni.setStorageSync
+    }
+  })
 )
 
 export default store
 
 // 模块统一导出
 export * from './user'
-export * from './count'
+export * from './app'

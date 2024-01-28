@@ -23,21 +23,18 @@ import vueSetupExtend from 'vite-plugin-vue-setup-extend'
 import AutoImport from 'unplugin-auto-import/vite'
 import viteCompression from 'vite-plugin-compression'
 import ViteRestart from 'vite-plugin-restart'
-import { visualizer } from 'rollup-plugin-visualizer'
 
 // https://vitejs.dev/config/
 export default ({ command, mode }) => {
-  console.log(mode === process.env.NODE_ENV)
+  console.log('mode === process.env.NODE_ENV :', mode === process.env.NODE_ENV)
 
   // mode: 区分生产环境还是开发环境
-  console.log(command, mode)
-  // npm run dev 时得到 => serve development
-  // npm run build 时得到 => build development
+  console.log({command, mode})
 
   // loadEnv(): 返回当前环境env文件中额外定义的变量
   const env = loadEnv(mode, path.resolve(process.cwd(), 'env'))
-  console.log(env)
-  console.log(process.env.UNI_PLATFORM) // 得到 mp-weixin, h5 等
+  console.log('env', env)
+  console.log('UNI_PLATFORM: ' + process.env.UNI_PLATFORM) // 得到 mp-weixin, h5 等
 
   return defineConfig({
     envDir: './env', // 自定义env目录
@@ -78,15 +75,7 @@ export default ({ command, mode }) => {
         transformIndexHtml(html) {
           return html.replace('%BUILD_DATE%', dayjs().format('YYYY-MM-DD HH:mm:ss'))
         }
-      },
-      // 打包分析插件
-      mode === 'production' &&
-        visualizer({
-          filename: './node_modules/.cache/visualizer/stats.html',
-          open: true,
-          gzipSize: true,
-          brotliSize: true
-        })
+      }
     ],
     css: {
       postcss: {

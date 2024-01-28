@@ -2,9 +2,11 @@
 **_<font color=#F56C6C>请使用markdown软件或安装markdown相关插件阅读</font>_**
 ### ⚙️ 环境
 ```
-Node 18+,推荐v18.19.0
+Node 18+,仅推荐v18.19.0
 ```
-v18.19.0：[https://nodejs.org/dist/latest-v18.x/node-v18.19.0-x64.msi](https://nodejs.org/dist/latest-v18.x/node-v18.19.0-x64.msi)
+v18.19.0：[https://nodejs.org/dist/latest-v18.x/node-v18.19.0-x64.msi](https://nodejs.org/dist/latest-v18.x/node-v18.19.0-x64.msi)<br>
+备：[v18.19.0.zip](https://registry.npmmirror.com/-/binary/node/v18.19.0/node-v18.19.0-win-x64.zip) &nbsp;|
+[v14.21.3.zip](https://registry.npmmirror.com/-/binary/node/latest-v14.x/node-v14.21.3-win-x64.zip)
 
 ### 🔨 安装
 - `npm install`
@@ -27,7 +29,6 @@ v18.19.0：[https://nodejs.org/dist/latest-v18.x/node-v18.19.0-x64.msi](https://
 volta安装成功后：
 <p>在终端(命令行)中输入 <span style="color:green;">volta install node@18.19.0</span> ，即安装Node 18.19.0版本。</p>
 <p>在终端(命令行)中输入 <span style="color:green;">volta install node@14.21.3</span> ，可安装Node 14.21.3版本。</p>
-<p style="height: 1px;background-color: #cccccc"></p>
 
 ### 🔧开发工具
 - HBuilderX<font color=red>(必须)</font> [下载](https://www.dcloud.io/hbuilderx.html)
@@ -65,6 +66,13 @@ volta安装成功后：
 </div>
 
 #### 📌本项目由 uniapp + Vue3 + Ts + Vite4 + UnoCss + UniUI 驱动
+#### 🌐 以下是可能用到的网站
+- [unocss样式查询](https://unocss.dev/interactive/) <br>
+- [uni-ui](https://uniapp.dcloud.net.cn/component/uniui/color.html)
+- [pinia中文网](https://pinia.web3doc.top/introduction.html)
+- [dayjs中文网](https://dayjs.fenxianglu.cn/category/)
+- [vue3官网](https://cn.vuejs.org/guide/essentials/reactivity-fundamentals.html)
+
 
 #### 🎨 `v3` 代码段【使用vscode的宝宝😃使用】
 

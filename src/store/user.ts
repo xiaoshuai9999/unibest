@@ -18,10 +18,10 @@ export const useUserStore = defineStore(
     return {
       userInfo,
       setUserInfo,
-      clearUserInfo,
+      clearUserInfo
     }
   },
   {
-    persist: true,
-  },
+    persist: true
+  }
 )

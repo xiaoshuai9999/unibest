@@ -6,15 +6,15 @@ interface Language {
 const languages: Language[] = [
   {
     name: '简体中文',
-    value: 'zh-CN'
+    value: 'zh-Hans'
   },
   {
     name: '繁體中文',
-    value: 'zh-TW'
+    value: 'zh-Hant'
   },
   {
     name: 'English',
-    value: 'en-US'
+    value: 'en'
   }
 ]
 

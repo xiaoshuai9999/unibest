@@ -1,20 +1,11 @@
 // uno.config.ts
-import {
-  defineConfig,
-  presetAttributify,
-  presetIcons,
-  transformerDirectives,
-  transformerVariantGroup
-} from 'unocss'
+import { defineConfig, presetAttributify, presetIcons, transformerDirectives, transformerVariantGroup } from 'unocss'
 
 import { presetUni } from '@uni-helper/unocss-preset-uni'
 
 export default defineConfig({
   rules: [
-    [
-      /^lh-(\d+\.{0,1}\d{0,2})$/,
-      ([, d]) => ({ 'line-height': `${(Number(d) / 4).toFixed(2)}rem` })
-    ],
+    [/^lh-(\d+\.{0,1}\d{0,2})$/, ([, d]) => ({ 'line-height': `${(Number(d) / 4).toFixed(2)}rem` })],
     ['c-main', { color: '#2d71fb' }],
     ['c-blue', { color: '#2d71fb' }],
     ['c-green', { color: '#35c087' }],
@@ -29,7 +20,8 @@ export default defineConfig({
     ['bg-red', { 'background-color': '#E02F2D' }],
     ['bg-3', { 'background-color': '#333333' }],
     ['bg-6', { 'background-color': '#666666' }],
-    ['bg-9', { 'background-color': '#999999' }]
+    ['bg-9', { 'background-color': '#999999' }],
+    ['bg-full-auto', { 'background-size': '100% auto' }]
   ],
   shortcuts: {
     'wh-full': 'w-full h-full',
