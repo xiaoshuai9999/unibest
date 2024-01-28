@@ -12,7 +12,7 @@ v18.19.0：[https://nodejs.org/dist/latest-v18.x/node-v18.19.0-x64.msi](https://
 - `npm install`
 
 ### 📦 运行
-- `npm run dev:h5`
+- `npm run dev`
 
 ### 🔗 发布
 - `npm run build`，打包后的文件在 `dist/build/h5`，可以放到web服务器
