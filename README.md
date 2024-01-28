@@ -37,7 +37,7 @@ volta安装成功后：
 <font color=red>HBuilderX必须安装🔖。另外可选Webstorm或Vscode。<br>
 开发时一般使用Webstorm或vscode写代码，使用HBuilderX预览和打包。直接使用HBuilderX也是可以的😃</font>
 ### 🐳开发工具插件
-<font color=#F56C6C>HBuilderX</font>
+📝<font color=#F56C6C>HBuilderX</font>
 <div style="margin-left: 40px;">
 <p>内置浏览器</p>
 <p>Git插件</p>
@@ -47,13 +47,13 @@ volta安装成功后：
 <p>uni-helpers</p>
 <p>uni_modules</p>
 </div>
-<font color=#F56C6C>Webstorm</font>
+📝<font color=#F56C6C>Webstorm</font>
 <div style="margin-left: 40px;">
 <p>GitToolBox</p>
 <p>.env files support</p>
 <p>Uniapp Support</p>
 </div>
-<font color=#F56C6C>Vscode</font>
+📝<font color=#F56C6C>Vscode</font>
 <div style="margin-left: 40px;">
 <p>Vue Language Features (Volar)</p>
 <p>TypeScript Vue Plugin (Volar)</p>
