@@ -8,7 +8,7 @@
 .default-layout {
   display: flex;
   flex-direction: column;
-
+  width: 100vw;
   // #ifdef MP-WEIXIN
   height: 100%;
 

@@ -25,6 +25,9 @@ export default defineConfig({
   ],
   shortcuts: {
     'wh-full': 'w-full h-full',
+    'wh-screen': 'w-screen h-screen',
+    'full-center': 'flex flex-row items-center justify-center',
+    'full-col-center': 'flex flex-col items-center justify-center',
     'flex-center': 'flex items-center'
   },
   presets: [
