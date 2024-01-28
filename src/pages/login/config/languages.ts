@@ -1,7 +1,4 @@
-interface Language {
-  name: string
-  value: string
-}
+import { Language } from '@/typings'
 
 const languages: Language[] = [
   {

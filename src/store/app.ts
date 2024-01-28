@@ -13,11 +13,14 @@ export const useAppStore = defineStore(
     const setToken = (tk: string) => {
       token.value = tk
     }
+    const appUrl = ref('')
+
     return {
       language,
       setLanguage,
       token,
-      setToken
+      setToken,
+      appUrl
     }
   },
   {

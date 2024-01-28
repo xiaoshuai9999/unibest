@@ -1,5 +1,5 @@
 /* eslint-disable no-param-reassign */
-import { useUserStore } from '@/store'
+import { useAppStore } from '@/store'
 import { UserInfo } from '@/typings'
 
 type Data<T> = {
@@ -7,10 +7,20 @@ type Data<T> = {
   msg: string
   result: T
 }
+type methodType = 'OPTIONS' | 'GET' | 'HEAD' | 'POST' | 'PUT' | 'DELETE' | 'TRACE' | 'CONNECT'
+
+interface option {
+  method: methodType
+  timeout: number
+}
+
+const defaultOption: option = {
+  method: 'POST',
+  timeout: 60 * 1000 * 5 // 5分钟
+}
 
 // 请求基地址
 const baseURL = import.meta.env.VITE_SERVER_BASEURL
-// console.log(import.meta.env)
 
 // 拦截器配置
 const httpInterceptor = {
@@ -20,16 +30,16 @@ const httpInterceptor = {
     if (!options.url.startsWith('http')) {
       options.url = baseURL + options.url
     }
-    // 2. 请求超时
-    options.timeout = 10000 // 10s
+    options.method = options.method || defaultOption.method
+    options.timeout = options.timeout || defaultOption.timeout
     // 3. 添加小程序端请求头标识
     options.header = {
       platform: 'mp-weixin', // 可选值与 uniapp 定义的平台一致，告诉后台来源
       ...options.header
     }
     // 4. 添加 token 请求头标识
-    const userStore = useUserStore()
-    const { token } = userStore.userInfo as unknown as UserInfo
+    const appStore = useAppStore()
+    const { token } = appStore
     if (token) {
       options.header.Authorization = `Bearer ${token}`
     }

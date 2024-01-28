@@ -19,29 +19,19 @@ export default () => {
   // 页面渲染完毕，绑定动画效果
   onReady(() => {
     // 动画效果,导航栏背景色
-    pageInstance.animate(
-      '.fly-navbar',
-      [{ backgroundColor: 'transparent' }, { backgroundColor: '#f8f8f8' }],
-      1000,
-      {
-        scrollSource: '#scroller',
-        timeRange: 1000,
-        startScrollOffset: 0,
-        endScrollOffset: 50
-      }
-    )
+    pageInstance.animate('.fly-navbar', [{ backgroundColor: 'transparent' }, { backgroundColor: '#f8f8f8' }], 1000, {
+      scrollSource: '#scroller',
+      timeRange: 1000,
+      startScrollOffset: 0,
+      endScrollOffset: 50
+    })
     // 动画效果,导航栏标题
-    pageInstance.animate(
-      '.fly-navbar .title',
-      [{ color: 'transparent' }, { color: '#000' }],
-      1000,
-      {
-        scrollSource: '#scroller',
-        timeRange: 1000,
-        startScrollOffset: 0,
-        endScrollOffset: 50
-      }
-    )
+    pageInstance.animate('.fly-navbar .title', [{ color: 'transparent' }, { color: '#000' }], 1000, {
+      scrollSource: '#scroller',
+      timeRange: 1000,
+      startScrollOffset: 0,
+      endScrollOffset: 50
+    })
     // 动画效果,导航栏返回按钮
     pageInstance.animate('.fly-navbar .left-icon', [{ color: '#fff' }, { color: '#000' }], 1000, {
       scrollSource: '#scroller',

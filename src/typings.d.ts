@@ -9,3 +9,8 @@ export type UserItem = {
   username: string
   age: number
 }
+
+export type Language = {
+  name: string
+  value: string
+}
